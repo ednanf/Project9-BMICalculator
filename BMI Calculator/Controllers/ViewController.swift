@@ -5,6 +5,8 @@
 //  Created by Angela Yu on 21/08/2019.
 //  Copyright © 2019 Angela Yu. All rights reserved.
 //
+//  Modified by Ednan R. Frizzera Filho on 05/09/2023
+//
 
 import UIKit
 
@@ -27,6 +29,9 @@ class ViewController: UIViewController {
     
     @IBAction func weightSliderChanged(_ sender: UISlider) {
         weightLabel.text = String(Int(sender.value)) + "Kg"
+    }
+    
+    @IBAction func calculatePressed(_ sender: UIButton) {
     }
     
 }
