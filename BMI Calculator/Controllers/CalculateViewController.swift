@@ -41,7 +41,7 @@ class CalculateViewController: UIViewController {
         
         calculatorBrain.calculateBMI(height: height, weight: weight)
         
-        // creates a segue
+        // when the button is pressed, it will perform a segue
         self.performSegue(withIdentifier: "goToResult", sender: self) // self = current class
     }
     
@@ -49,6 +49,8 @@ class CalculateViewController: UIViewController {
         if segue.identifier == "goToResult" {
             let destinationVC = segue.destination as! ResultsViewController
             destinationVC.bmiValue = calculatorBrain.getBMIValue() // value being passed over
+            destinationVC.advice = calculatorBrain.getAdvice()
+            destinationVC.color = calculatorBrain.getColor()
         }
     }
 }

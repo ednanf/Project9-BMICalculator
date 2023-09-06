@@ -13,11 +13,15 @@ class ResultsViewController: UIViewController {
     @IBOutlet var adviceLabel: UILabel!
     
     var bmiValue: String? // optional because we don't know a value at the start
+    var advice: String?
+    var color: UIColor?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         bmiLabel.text = bmiValue
+        adviceLabel.text = advice
+        view.backgroundColor = color
     }
     
     @IBAction func recalculatePressed(_ sender: UIButton) {
